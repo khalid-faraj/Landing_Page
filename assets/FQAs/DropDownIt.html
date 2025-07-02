@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Maham</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #f9fafb;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 3rem;
+        text-align: left;
+      }
+
+      .faq-item {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        background-color: #ffffff;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.2s;
+      }
+
+      .faq-item:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1.25rem 1.5rem;
+        background: white;
+        border: none;
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #111827;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .faq-question:hover {
+        background-color: #f9fafb;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .faq-icon.rotate {
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        background-color: #f9fafb;
+        padding: 0 1.5rem;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+      }
+
+      .faq-answer.open {
+        padding-bottom: 1.25rem;
+        padding-top: 0.75rem;
+        max-height: 500px;
+        opacity: 1;
+      }
+
+      .faq-answer p {
+        color: #374151;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <div id="faq-list"></div>
+    </div>
+
+    <script>
+      const faqData = [
+        {
+          question: 'Who can use Maham?',
+          answer:
+            "Maham is designed for students, teachers, parents, and educational administrators. Whether you're tracking individual progress or managing institutional data, Maham provides tools for everyone in the educational ecosystem.",
+        },
+        {
+          question: 'Can schools customize Maham to their needs?',
+          answer:
+            "Yes, Maham can be customized based on your school's specific workflows and requirements. We offer flexible configuration options to match your institution's unique processes and policies.",
+        },
+        {
+          question: "Can I track my child's attendance and performance?",
+          answer:
+            "Absolutely! Parents have access to real-time updates on their child's attendance, academic performance, assignments, and progress reports through our parent portal. You'll receive notifications for important updates and can communicate directly with teachers.",
+        },
+        {
+          question: 'Is Maham easy to use for parents or non-tech users?',
+          answer:
+            'Yes, Maham is designed with user-friendliness in mind. Our intuitive interface requires no technical expertise. We provide comprehensive onboarding, tutorials, and 24/7 support to ensure everyone can use the platform effectively.',
+        },
+        {
+          question: 'How secure is the data on Maham?',
+          answer:
+            'Data security is our top priority. We use enterprise-grade encryption, secure cloud infrastructure, and comply with educational data privacy regulations including FERPA. All data is backed up regularly and access is strictly controlled with role-based permissions.',
+        },
+      ];
+
+      const faqList = document.getElementById('faq-list');
+
+      faqData.forEach((item, index) => {
+        const faqItem = document.createElement('div');
+        faqItem.className = 'faq-item';
+
+        const questionBtn = document.createElement('button');
+        questionBtn.className = 'faq-question';
+        questionBtn.setAttribute(
+          'aria-expanded',
+          index === 1 ? 'true' : 'false'
+        );
+
+        const questionText = document.createElement('span');
+        questionText.textContent = item.question;
+
+        const icon = document.createElement('span');
+        icon.className = 'faq-icon';
+        icon.innerHTML = '&#9660;'; // ▼
+
+        questionBtn.appendChild(questionText);
+        questionBtn.appendChild(icon);
+
+        const answerDiv = document.createElement('div');
+        answerDiv.className = 'faq-answer';
+        if (index === 1) {
+          answerDiv.classList.add('open');
+          icon.classList.add('rotate');
+        }
+
+        const answerText = document.createElement('p');
+        answerText.textContent = item.answer;
+        answerDiv.appendChild(answerText);
+
+        questionBtn.addEventListener('click', () => {
+          const currentlyOpen = document.querySelector('.faq-answer.open');
+          const allIcons = document.querySelectorAll('.faq-icon');
+
+          if (currentlyOpen && currentlyOpen !== answerDiv) {
+            currentlyOpen.classList.remove('open');
+            currentlyOpen.previousSibling.setAttribute(
+              'aria-expanded',
+              'false'
+            );
+          }
+
+          allIcons.forEach((ic) => ic.classList.remove('rotate'));
+
+          const isOpen = answerDiv.classList.contains('open');
+
+          if (isOpen) {
+            answerDiv.classList.remove('open');
+            questionBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            answerDiv.classList.add('open');
+            questionBtn.setAttribute('aria-expanded', 'true');
+            icon.classList.add('rotate');
+          }
+        });
+
+        faqItem.appendChild(questionBtn);
+        faqItem.appendChild(answerDiv);
+        faqList.appendChild(faqItem);
+      });
+    </script>
+  </body>
+</html>

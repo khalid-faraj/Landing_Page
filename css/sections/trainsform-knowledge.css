@@ -1,0 +1,109 @@
+/*  Trainsform Knowledge Section  */
+
+.transform-knowledge-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 43.188rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.transform-knowledge-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75rem;
+  height: 0.125rem;
+  background-color: #e4e4e4;
+}
+
+.tk-content {
+  width: 37.063rem;
+  height: 36rem;
+  margin-left: 7.5rem;
+  margin-right: 0.875rem;
+}
+
+.tk-content .tk-title {
+  width: 15.563rem;
+  height: 2.625rem;
+  background-color: #edf4ff;
+  color: #023ece;
+  border-radius: 0.625rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.02%;
+  text-align: center;
+  padding-top: 0.688rem;
+  margin-bottom: 1.875rem;
+}
+
+.tk-content .tk-2nd-title {
+  width: 35rem;
+  height: 8.125rem;
+  color: #0b0d1e;
+  font-weight: 600;
+  font-size: 3.125rem;
+  margin-bottom: 1.5rem;
+}
+.tk-content .tk-desc {
+  width: 34.188rem;
+  height: 8.125rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #343434;
+  margin-bottom: 2.5rem;
+}
+
+.transform-knowledge-container .knowledges {
+  height: 11.226rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 7.125rem;
+}
+
+.knowledges .knowledge {
+  width: 17.438rem;
+  height: 4.063rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+
+.knowledge .knowledge-info h4,
+.knowledge .knowledge-info h5 {
+  width: 12.125rem;
+  height: 1.625rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.knowledge .knowledge-info h4 {
+  color: #0b0d1e;
+}
+.knowledge .knowledge-info h5 {
+  color: rgba(11, 13, 30, 0.6);
+}
+
+.knowledges .knowledge img {
+  margin-right: 1.375rem;
+  width: 4.038rem;
+  height: 4.038rem;
+  padding: 1.211rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2.019rem;
+}
+
+.transform-knowledge-container .tk-img img {
+  margin-top: 1.75rem;
+  width: 34.964rem;
+  height: 34.5rem;
+}

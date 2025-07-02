@@ -1,0 +1,174 @@
+:root {
+  --base-font-size: 16px; /* يمكن تغيير هذه القيمة حسب الحاجة */
+}
+
+.home-container {
+  margin: 0 auto;
+  margin-top: 4.9375rem; /* 79px / 16 */
+  width: 100%;
+  max-width: 90rem; /* 1440px / 16 */
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 1.25rem; /* 20px / 16 */
+  box-sizing: border-box;
+}
+
+.home-content {
+  background-image: url("../assets/Home-Section/Blur_bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  padding: 1.25rem; /* 20px / 16 */
+  box-sizing: border-box;
+}
+
+.home-content .sm-title {
+  background-color: #edf4ff;
+  width: auto;
+  max-width: 21rem; /* 336px / 16 */
+  height: auto;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 3vw, 1.25rem); /* بين 14px و20px */
+  letter-spacing: -0.02em;
+  border-radius: 0.5rem; /* 8px / 16 */
+  padding: 0.6875rem 1.5rem; /* 11px 24px / 16 */
+  color: #000;
+}
+
+.title {
+  margin-top: 1.25rem; /* 20px / 16 */
+  width: 100%;
+  max-width: 32.5rem;
+  height: auto;
+  font-size: clamp(2rem, 5vw, 4.5rem); /* بين 32px و72px */
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  color: #0b0d1e;
+}
+
+.title-desc {
+  margin-top: 1.5rem; /* 24px / 16 */
+  font-size: clamp(0.875rem, 2vw, 1.25rem); /* بين 14px و20px */
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.02%;
+  color: #0b0d1e;
+  max-width: 32.5rem;
+}
+
+.home-btns {
+  margin-top: 1.5rem; /* 24px / 16 */
+  width: 100%;
+  max-width: 22.313rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.9375rem; /* 15px / 16 */
+  margin-bottom: 2.5rem; /* 40px / 16 */
+}
+
+.home-btns .get-started-btn,
+.home-btns .contact-us-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 10.625rem;
+  height: 3.5rem;
+  border-radius: 0.75rem; /* 12px / 16 */
+  font-size: clamp(0.875rem, 2vw, 1.25rem); /* بين 14px و20px */
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02%;
+  transition: all 0.3s ease; /* إضافة تأثير سلس للتغييرات */
+}
+
+.home-btns .get-started-btn {
+  background-color: #023ece;
+  color: #fff;
+}
+
+.home-btns .contact-us-btn {
+  border: 0.0625rem solid #575757; /* 1px / 16 */
+  color: #3d3d3d;
+}
+
+.home-btns .contact-us-btn:hover {
+  background-color: #edf4ff;
+}
+
+.home-btns .contact-us-btn img {
+  width: 0.892rem;
+  height: 0.625rem;
+  margin-left: 0.938rem;
+}
+
+.home-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem; /* 20px / 16 */
+}
+
+.home-img img {
+  width: 100%;
+  max-width: 32.389rem;
+  height: auto;
+  margin: 0;
+}
+
+/* Media Queries */
+@media (min-width: 48em) {
+  /* 768px / 16 */
+  .home-container {
+    flex-wrap: nowrap;
+  }
+
+  .home-content {
+    width: 50%;
+    padding-left: 2.8125rem; /* 45px / 16 */
+  }
+
+  .home-img {
+    width: 50%;
+    margin-top: 2.625rem; /* 42px / 16 */
+  }
+}
+
+@media (min-width: 64em) {
+  /* 1024px / 16 */
+  .home-content {
+    margin-left: 4.75rem; /* 76px / 16 */
+    width: 44.4581rem; /* 711.33px / 16 */
+  }
+
+  .home-img img {
+    margin-left: 2.8125rem; /* 45px / 16 */
+  }
+}
+
+/* تحسينات إضافية لعمليات التكبير/التصغير */
+@media (max-width: 480px) {
+  .home-container {
+    margin-top: 2rem;
+  }
+
+  .home-btns {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .home-btns .get-started-btn,
+  .home-btns .contact-us-btn {
+    max-width: 100%;
+  }
+}

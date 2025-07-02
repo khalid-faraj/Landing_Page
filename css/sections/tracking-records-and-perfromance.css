@@ -1,0 +1,109 @@
+/*   Tracking Records and perfromance Section   */
+
+.tracking-perfromance-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  height: 41.278rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.tracking-perfromance-container .trp-img img {
+  width: 41.285rem;
+  height: 41.285rem;
+  margin-right: 7.188rem;
+  margin-top: 3.063rem;
+  margin-left: 1rem;
+}
+
+.tracking-perfromance-container .trp-content {
+  width: 33.563rem;
+  height: 38.5rem;
+  margin-top: 5.609rem;
+}
+
+.trp-content .trp-title {
+  width: 21.688rem;
+  height: 2.625rem;
+  background-color: #edf4ff;
+  color: #023ece;
+  border-radius: 0.625rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.02%;
+  text-align: center;
+  padding-top: 0.688rem;
+  margin-bottom: 2rem;
+}
+
+.trp-content .trp-2nd-title {
+  width: 32.563rem;
+  height: 8.125rem;
+  color: #0b0d1e;
+  font-weight: 600;
+  font-size: 3.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.trp-content .trp-desc {
+  width: 30.125rem;
+  height: 8.125rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: rgba(11, 13, 30, 0.7);
+  margin-bottom: 2.5rem;
+}
+
+.trp-content .records-container {
+  width: 33.563rem;
+  height: 13.563rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.records-container .record-one,
+.record-two,
+.record-three {
+  height: 3.563rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.438rem;
+}
+.records-container .record-one h1,
+.record-one p,
+.record-two h1,
+.record-two p,
+.record-thee h1,
+.record-three p {
+  height: 3.25rem;
+}
+
+.records-container .record-one h1,
+.record-two h1,
+.record-three h1 {
+  width: 5.313rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-right: 0.938rem;
+}
+
+.records-container .record-one p,
+.record-two p,
+.record-three p {
+  width: 20.5rem;
+  margin-left: 0.938rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #545662;
+}
+
+.records-container .record-one span,
+.record-two span,
+.record-three span {
+  margin: 0px;
+  font-size: 3.063rem;
+  color: rgba(20, 18, 25, 0.2);
+}

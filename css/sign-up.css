@@ -1,0 +1,96 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #6c63ff; /* لون الخلفية الجديد: رمادي فاتح جدًا */
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* ظل أخف وأكثر حداثة */
+}
+.container .registration {
+  display: none;
+}
+#check:checked ~ .registration {
+  display: block;
+}
+#check:checked ~ .login {
+  display: none;
+}
+#check {
+  display: none;
+}
+.container .form {
+  padding: 2rem;
+}
+.form header {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333333; /* لون النص الرئيسي للعناوين */
+}
+.form input {
+  height: 60px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 17px;
+  margin-bottom: 1.3rem;
+  border: 1px solid #e0e0e0; /* لون حدود جديد: رمادي فاتح */
+  border-radius: 6px;
+  outline: none;
+  color: #333333; /* لون نص المدخلات */
+}
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); /* ظل ألطف عند التركيز */
+  border-color: #6c63ff; /* لون البوردر عند التركيز: بنفسجي فاتح */
+}
+.form a {
+  font-size: 16px;
+  color: #6c63ff; /* لون الروابط الجديد: بنفسجي فاتح */
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+  color: #ff6b6b; /* لون الروابط عند الـ hover: أحمر وردي */
+}
+.form input.button {
+  color: #fff;
+  background: #6c63ff; /* لون الزر الأساسي الجديد: بنفسجي فاتح */
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover {
+  background: #554dcc; /* لون الزر عند الـ hover: درجة أغمق من البنفسجي */
+}
+.signup {
+  font-size: 17px;
+  text-align: center;
+  color: #333333; /* لون نص الـ signup */
+}
+.signup label {
+  color: #6c63ff; /* لون رابط الـ signup الجديد: بنفسجي فاتح */
+  cursor: pointer;
+}
+.signup label:hover {
+  text-decoration: underline;
+  color: #ff6b6b; /* لون الـ signup label عند الـ hover: أحمر وردي */
+}

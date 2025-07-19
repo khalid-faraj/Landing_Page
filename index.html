@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <title>Maham</title>
   </head>
   <body>
     <header class="header">
-      <a>
+      <div class="web-title">
         <img
           src="./assets/navBar/Logo.svg"
           alt="Logo-Icon"
@@ -16,7 +21,8 @@
           height="44"
           id="Logo-Icon"
         />
-      </a>
+        <a href="#home" class="web-name">Maham</a>
+      </div>
       <ul class="sections-links">
         <a href="#home">Home</a>
         <a href="#features">Features</a>
@@ -257,17 +263,133 @@
     </section>
 
     <!-- FQAs Section -->
-    <!-- <section class="fqa-container">
+    <section class="fqa-container">
       <div class="fqa-icons">
         <img src="./assets/FQAs/SectionImg.svg" alt="Question image" />
       </div>
       <div class="fqa-content">
         <h1 class="fqa-title">FQAs</h1>
-        <div class="container">
-          <h1>Frequently Asked Questions</h1>
-          <div id="faq-list"></div>
+        <h1 class="fqa-title2">Frequently Asked Questions</h1>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              Who can use Maham?
+              <span class="arrow">
+                <img src="./assets/FQAs/arrow-down.svg" alt="arrow" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              Anyone in education — schools, teachers, parents, and students.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can schools customize Maham to their needs?
+              <span class="arrow">
+                <img src="./assets/FQAs/arrow-down.svg" alt="arrow" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              Yes, it’s fully customizable to fit each school’s workflow.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I track my child’s attendance and performance?
+              <span class="arrow">
+                <img src="./assets/FQAs/arrow-down.svg" alt="arrow" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              Yes, parents can monitor attendance, grades, and feedback in real
+              time.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Is Maham easy to use for parents or non-tech users?
+              <span class="arrow">
+                <img src="./assets/FQAs/arrow-down.svg" alt="arrow" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              Yes, it’s user-friendly and easy to navigate for everyone.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How secure is the data on Maham?
+              <span class="arrow">
+                <img src="./assets/FQAs/arrow-down.svg" alt="arrow" />
+              </span>
+            </button>
+            <div class="faq-answer">
+              Highly secure — all data is encrypted and protected.
+            </div>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
+
+    <!-- Bre-Footer Section -->
+    <section class="footer-container">
+      <section class="bre-footer-section">
+        <div class="about-maham">
+          <div class="web-footer-title">
+            <img
+              src="./assets/navBar/Logo.svg"
+              alt="Logo-Icon"
+              width="176"
+              height="44"
+              id="Logo-Icon"
+            />
+            <a href="#home" class="web-name">Maham</a>
+          </div>
+          <p class="about-maham-p">
+            Maham is your gateway to expert-led, accessible learning. Empowering
+            you with skills to succeed in a fast-changing world, we offer
+            tracking of your progress, designed to help you grow and achieve
+            your goals at your own pace
+          </p>
+          <div class="go-top">
+            <h3>Back to top</h3>
+            <a href="#home"><img src="./assets/bre-footer/Arrow-Up.svg" /></a>
+          </div>
+        </div>
+        <div class="hyper-links">
+          <div class="hyper-links-container">
+            <h1 class="hyper-links-title">Company</h1>
+            <a href="">Home</a>
+            <a href="">Catagories</a>
+            <a href="">About us</a>
+          </div>
+          <div class="hyper-links-container">
+            <h1 class="hyper-links-title">Catagories</h1>
+            <a href="">Tracking</a>
+            <a href="">Assignments </a>
+            <a href="">Follow-ups</a>
+            <a href="">Communication</a>
+          </div>
+          <div class="hyper-links-container">
+            <h1 class="hyper-links-title">Support</h1>
+            <a href="">Blogs</a>
+            <a href="">Contact us</a>
+          </div>
+        </div>
+      </section>
+      <div class="footer-divider"></div>
+      <footer class="footer-bottom-section">
+        <div class="footer-left">© Maham Inc. All Rights Reserved.</div>
+        <div class="footer-right">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </footer>
+    </section>
+
+    <script src="./js/FQAs.js"></script>
   </body>
 </html>

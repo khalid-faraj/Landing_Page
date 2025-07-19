@@ -1,0 +1,221 @@
+.fqa-container {
+  margin: 0 auto;
+  width: 75.848rem;
+  max-width: 1440px;
+  height: 41.875rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.fqa-container .fqa-icons img {
+  width: 31.071rem;
+  height: 35.798rem;
+  margin-right: 7.188rem;
+  margin-top: 9.813rem;
+  margin-left: 1rem;
+}
+
+.fqa-container .fqa-content {
+  height: 38.5rem;
+  width: 36.563rem;
+  margin-top: 3.75rem;
+}
+
+.fqa-container .fqa-content .fqa-title {
+  width: 5.875rem;
+  height: 2.625rem;
+  background-color: #edf4ff;
+  color: #023ece;
+  border-radius: 0.625rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.02%;
+  text-align: center;
+  padding-top: 0.688rem;
+  margin-bottom: 2rem;
+}
+
+.fqa-container .fqa-content .fqa-title2 {
+  width: 26.438rem;
+  height: 8.125rem;
+  color: #0b0d1e;
+  font-weight: 600;
+  font-size: 3.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-container {
+  width: 36.563rem;
+  height: 23.688rem;
+}
+
+.faq-item {
+  margin-top: 1.563rem;
+  margin-bottom: 1.375rem;
+  border-bottom: 1px solid #ddd;
+  width: 36.563rem;
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  margin-left: -0.5rem;
+  width: 36.563rem;
+  min-height: 1.563rem;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  font-family: "Geist";
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0b0d1e;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.arrow img {
+  width: 1.563rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0; /* ما يخليش السهم يصغر */
+}
+
+.faq-item.active .arrow img {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  overflow: hidden;
+  width: 29.375rem;
+  /*height: 3.25rem;*/
+  height: 0;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  font-family: "Geist";
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 0;
+  color: #545662;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  /* No static styles here, height is handled dynamically by JS */
+  opacity: 1;
+}
+
+/* ...existing code... */
+
+@media (max-width: 1200px) {
+  .fqa-container {
+    max-width: 100vw;
+    width: 100%;
+    padding: 0 2rem;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .fqa-container .fqa-icons img {
+    width: 22rem;
+    height: auto;
+    margin: 2rem 0 2rem 0;
+  }
+  .fqa-container .fqa-content {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .fqa-container .fqa-content .fqa-title2 {
+    width: 100%;
+    font-size: 2rem;
+    height: auto;
+  }
+  .faq-container,
+  .faq-item,
+  .faq-question {
+    width: 100%;
+    min-width: 0;
+  }
+  .faq-answer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .fqa-container {
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .fqa-container .fqa-icons img {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+  }
+  .fqa-container .fqa-content {
+    width: 100%;
+    margin-top: 1rem;
+    height: auto;
+  }
+  .fqa-container .fqa-content .fqa-title2 {
+    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+  }
+  .faq-container,
+  .faq-item,
+  .faq-question {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .faq-answer {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .fqa-container {
+    padding: 0.5rem 0.25rem;
+  }
+  .fqa-container .fqa-icons img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem auto;
+  }
+  .fqa-container .fqa-content .fqa-title {
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+    padding-top: 0.5rem;
+  }
+  .fqa-container .fqa-content .fqa-title2 {
+    font-size: 1.1rem;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .faq-container,
+  .faq-item,
+  .faq-question,
+  .faq-answer {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+  .arrow img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
